@@ -8,8 +8,9 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
+  console.log('Database url...:', process.env.POSTGRES_URL);
   const customers = await fetchCustomers();
- 
+
   return (
     <main>
       <Breadcrumbs
